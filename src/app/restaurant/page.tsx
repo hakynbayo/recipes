@@ -7,7 +7,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import LottieAnimation from "../../components/LottieAnimation";
 import RestaurantCard from "../../components/ResturantCard";
 
-// Define the types for the API response
+// Define types for API response
 interface Location {
   formatted_address: string;
 }
@@ -41,9 +41,9 @@ const RestaurantsPage: React.FC = () => {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Fetch restaurants function
+  // Function to fetch nearby restaurants
   const fetchRestaurants = async (latitude: number, longitude: number) => {
-    setLoading(true);
+    setLoading(true); // Start loading
     try {
       const response = await fetch(
         `https://api.foursquare.com/v3/places/nearby?ll=${latitude},${longitude}&categories=11144,13000,13065,13377&limit=20`,
@@ -73,23 +73,24 @@ const RestaurantsPage: React.FC = () => {
     } catch (error) {
       alert("Failed to fetch restaurants. Please try again.");
     } finally {
-      setLoading(false);
+      setLoading(false); // End loading
     }
   };
 
   return (
     <div className="container mx-auto p-4">
+      {/* Back Link */}
       <div className="flex items-center mb-6">
-        {/* Back Link with Icon */}
         <Link href="/" className="flex items-center text-purple-700 hover:text-purple-500">
           <FaArrowLeft className="mr-2" />
           <span>Go Back</span>
         </Link>
       </div>
 
+      {/* Page Title */}
       <h1 className="text-4xl font-bold text-purple-700 mb-6">Find Nearby Restaurants</h1>
 
-      {/* Button to manually fetch restaurants */}
+      {/* Button to Fetch Restaurants */}
       <button
         onClick={() =>
           navigator.geolocation.getCurrentPosition(
@@ -97,8 +98,7 @@ const RestaurantsPage: React.FC = () => {
               const { latitude, longitude } = position.coords;
               fetchRestaurants(latitude, longitude);
             },
-            (error) => {
-              console.error(error);
+            () => {
               alert("Geolocation permission denied. Please enable it.");
             }
           )
@@ -108,7 +108,7 @@ const RestaurantsPage: React.FC = () => {
         Get Nearby Restaurants
       </button>
 
-      {/* Loading or Restaurants */}
+      {/* Display Loading Animation or Restaurant Cards */}
       {loading ? (
         <LottieAnimation />
       ) : (
