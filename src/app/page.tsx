@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
+import LottieAnimation from "@/components/LottieAnimation";
+
 import RecipeCard from "../components/RecipeCard";
 import { generateRandomCost } from "../utils/randomCostGenerator";
 
@@ -22,6 +24,7 @@ type Recipe = {
 const HomePage: React.FC = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(false); // Loading state
+  const [query, setQuery] = useState(""); // Search query
   const router = useRouter();
 
   const fetchRecipes = async (query: string) => {
@@ -71,25 +74,32 @@ const HomePage: React.FC = () => {
         </button>
       </div>
 
-      <input
-        type="text"
-        placeholder="Search for recipes..."
-        className="w-full p-2 border border-gray-300 rounded-md mb-4"
-        onKeyDown={(e) => e.key === "Enter" && fetchRecipes(e.currentTarget.value)}
-      />
+      <div className="flex mb-4">
+        <input
+          type="text"
+          placeholder="Search for recipes..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="w-2/4 p-2 border border-gray-300 rounded-md"
+        />
+        <button
+          onClick={() => fetchRecipes(query)}
+          className="ml-2 bg-purple-500 text-white px-4 py-2 rounded-md"
+        >
+          Search
+        </button>
+      </div>
 
       {/* Loading Animation or Recipe Results */}
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-purple-500 border-solid"></div>
-        </div>
+        <LottieAnimation />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {recipes.length > 0 ? (
             recipes.map((recipe) => <RecipeCard key={recipe.name} {...recipe} />)
           ) : (
-            <p className="col-span-full text-center text-gray-500">
-              No recipes found. Try searching for something else!
+            <p className="col-span-full text-left text-gray-500">
+              No recipes found. Try searching for Chicken, Rice, Salad etc....!
             </p>
           )}
         </div>
