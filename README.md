@@ -1,6 +1,6 @@
 ## Features
 
-This repository is 🔋 battery packed with:
+This repository is battery packed with:
 
 - ⚡️ Next.js 14 with App Router
 - ⚛️ React 18
