@@ -39,8 +39,6 @@ You can also check all of the **details and demos** on my blog post:
 
    cd recipes
 
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
-
 ### 2. Install dependencies
 
 It is encouraged to use **pnpm** so the husky hooks can work properly.
