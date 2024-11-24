@@ -39,3 +39,15 @@ yarn-error.log*
 CHANGELOG.md
 
 pnpm-lock.yaml
+
+layout.tsx
+page.tsx
+page.tsx
+loading.json
+Button.tsx
+LottieAnimation.tsx
+Modal.tsx
+RecipeCard.tsx
+ResturantCard.tsx
+currencyConverter.tsx
+randomCostGenerator.tsx
