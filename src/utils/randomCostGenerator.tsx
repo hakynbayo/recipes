@@ -1,0 +1,1 @@
+export const generateRandomCost = (): number => Math.floor(Math.random() * 5000) + 1000;
