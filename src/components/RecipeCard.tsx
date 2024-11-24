@@ -41,7 +41,8 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ name, calories, image, cost }) 
       </button>
       {isModalOpen && (
         <Modal onClose={() => setModalOpen(false)}>
-          <p className="text-center">USD Price: ${usdPrice}</p>
+          <p className="text-center font-semibold text-purple-700 text-2xl">USD Price</p>
+          <p className="text-center text-gray-500 text-xl">${usdPrice}</p>
         </Modal>
       )}
     </div>
