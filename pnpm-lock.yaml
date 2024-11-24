@@ -32,9 +32,6 @@ dependencies:
   react-icons:
     specifier: ^4.12.0
     version: 4.12.0(react@18.2.0)
-  react-lottie:
-    specifier: ^1.2.9
-    version: 1.2.9(react@18.2.0)
   react-modal:
     specifier: ^3.16.1
     version: 3.16.1(react-dom@18.2.0)(react@18.2.0)
@@ -7796,10 +7793,6 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
-  /lottie-web@5.12.2:
-    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
-    dev: false
-
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
@@ -9055,16 +9048,6 @@ packages:
 
   /react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
-    dev: false
-
-  /react-lottie@1.2.9(react@18.2.0):
-    resolution: {integrity: sha512-3qOazGM5/r+q7D3+kfPE7injsIAm42zkc1AjCFDXLz8RGrDrP5cQhTdeZ4k33s8ewTQqKtyfFuO1iyR1C1pOTA==}
-    peerDependencies:
-      react: '>=15.0.0'
-    dependencies:
-      lottie-web: 5.12.2
-      prop-types: 15.8.1
-      react: 18.2.0
     dev: false
 
   /react-modal@3.16.1(react-dom@18.2.0)(react@18.2.0):

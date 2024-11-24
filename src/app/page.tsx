@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-import LottieAnimation from "../components/LottieAnimation";
 import RecipeCard from "../components/RecipeCard";
 import { generateRandomCost } from "../utils/randomCostGenerator";
 
@@ -82,7 +81,7 @@ const HomePage: React.FC = () => {
       {/* Loading Animation or Recipe Results */}
       {loading ? (
         <div className="flex justify-center items-center h-64">
-          <LottieAnimation />
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-purple-500 border-solid"></div>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
