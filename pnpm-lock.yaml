@@ -85,9 +85,6 @@ devDependencies:
   '@types/react':
     specifier: ^18.2.45
     version: 18.2.65
-  '@types/react-lottie':
-    specifier: ^1.2.10
-    version: 1.2.10
   '@types/react-modal':
     specifier: ^3.16.3
     version: 3.16.3
@@ -3447,12 +3444,6 @@ packages:
 
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
-    dependencies:
-      '@types/react': 18.2.65
-    dev: true
-
-  /@types/react-lottie@1.2.10:
-    resolution: {integrity: sha512-rCd1p3US4ELKJlqwVnP0h5b24zt5p9OCvKUoNpYExLqwbFZMWEiJ6EGLMmH7nmq5V7KomBIbWO2X/XRFsL0vCA==}
     dependencies:
       '@types/react': 18.2.65
     dev: true
